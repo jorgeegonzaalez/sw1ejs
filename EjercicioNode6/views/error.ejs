@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= message %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('partials/cabecera') %>
+    <main>
+      <h1><%= message %></h1>
+      <h2><%= error.status %></h2>
+      <pre><%= error.stack %></pre>
+      <p><a href="/">&larr; Volver a la página inicial</a></p>
+    </main>
+    <% if (usuario) { %>
+      <%- include('partials/chat', { modo: 'flotante' }) %>
+    <% } %>
+  </body>
+</html>

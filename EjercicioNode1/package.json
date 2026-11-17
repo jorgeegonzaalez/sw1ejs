@@ -1,0 +1,12 @@
+{
+  "name": "ejercicio1-info-sistema",
+  "version": "1.0.0",
+  "description": "Servidor Node.js que muestra por consola información del sistema de forma periódica y configurable",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["os", "process", "node"],
+  "author": "Jorge González",
+  "license": "ISC"
+}

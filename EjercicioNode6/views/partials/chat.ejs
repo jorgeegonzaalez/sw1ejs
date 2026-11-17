@@ -1,0 +1,26 @@
+<%# Chat reutilizable. modo = 'flotante' (ventana en la esquina de cualquier página)
+    o 'pagina' (ocupa el contenido de la página /chat). Solo se incluye si hay sesión %>
+<section id="chat" class="chat chat-<%= modo %>" data-modo="<%= modo %>">
+  <header class="chat-cabecera">
+    <span class="chat-titulo">Chat <span id="chat-no-leidos" class="contador" hidden></span></span>
+    <span id="chat-estado" class="chat-estado">Conectando...</span>
+    <% if (modo === 'flotante') { %>
+      <button type="button" id="chat-plegar" class="chat-plegar" aria-expanded="false" aria-controls="chat-cuerpo">Abrir</button>
+    <% } %>
+  </header>
+  <div id="chat-cuerpo" class="chat-cuerpo">
+    <nav class="chat-conversaciones" aria-label="Conversaciones">
+      <ul id="chat-lista"></ul>
+    </nav>
+    <div class="chat-panel">
+      <h2 id="chat-conversacion" class="chat-conversacion">General</h2>
+      <ul id="chat-mensajes" class="chat-mensajes" aria-live="polite"></ul>
+      <form id="chat-formulario" class="chat-formulario" autocomplete="off">
+        <input id="chat-texto" type="text" maxlength="500" placeholder="Escribe un mensaje..." aria-label="Mensaje" disabled>
+        <button type="submit" class="boton" disabled>Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/chat.js"></script>

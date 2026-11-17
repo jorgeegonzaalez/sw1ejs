@@ -1,0 +1,18 @@
+<header class="cabecera">
+  <nav class="menu">
+    <a class="logo" href="/">Ejercicio 6</a>
+    <% if (usuario) { %>
+      <a href="/chat">Chat</a>
+    <% } %>
+  </nav>
+  <% if (usuario) { %>
+    <div class="sesion">
+      <span>Hola, <strong><%= usuario %></strong></span>
+      <form action="/logout" method="post">
+        <button type="submit" class="boton boton-secundario">Cerrar sesión</button>
+      </form>
+    </div>
+  <% } else { %>
+    <a class="boton" href="/login">Iniciar sesión</a>
+  <% } %>
+</header>
