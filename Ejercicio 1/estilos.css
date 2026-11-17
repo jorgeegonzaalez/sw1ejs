@@ -1,0 +1,235 @@
+/* ===== Variables ===== */
+:root {
+  --azul: #1e3a5f;
+  --azul-claro: #3b7dd8;
+  --fondo: #f4f6fa;
+  --texto: #222;
+  --borde: #d0d7e2;
+}
+
+/* ===== Selector universal y de elemento ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.6;
+  /* Rejilla: cabecera arriba, menú lateral a la izquierda, contenido, pie */
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas:
+    "cabecera cabecera"
+    "menu     contenido"
+    "pie      pie";
+  min-height: 100vh;
+}
+
+/* ===== Cabecera ===== */
+body > header {
+  grid-area: cabecera;
+  background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+body > header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+body > header p {
+  margin: 0.3rem 0 0;
+  opacity: 0.85;
+}
+
+/* ===== Menú lateral ===== */
+body > nav {
+  grid-area: menu;
+  background: var(--azul);
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #dbe6f5;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+nav li a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-left-color: #ffd166;
+  color: white;
+}
+
+/* ===== Contenido principal ===== */
+main {
+  grid-area: contenido;
+  padding: 1.5rem 2rem;
+}
+
+section {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Selector de id */
+#sobre-mi {
+  border-top: 4px solid var(--azul-claro);
+}
+
+/* ===== Títulos ===== */
+h2 {
+  color: var(--azul);
+  border-bottom: 2px solid var(--borde);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  color: var(--azul-claro);
+}
+
+/* ===== Textos ===== */
+strong {
+  color: var(--azul);
+}
+
+/* Selector de atributo */
+a[href^="mailto:"] {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+a {
+  color: var(--azul-claro);
+}
+
+/* ===== Listas ===== */
+/* Selector descendiente y pseudo-clase */
+#aficiones ul li:nth-child(odd) {
+  color: var(--azul);
+}
+
+ol li::marker {
+  font-weight: bold;
+  color: var(--azul-claro);
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+dd {
+  margin-left: 1.5rem;
+  color: #555;
+}
+
+/* ===== Tabla ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--borde);
+  padding: 0.6rem;
+  text-align: center;
+}
+
+th {
+  background: var(--azul);
+  color: white;
+}
+
+tr:nth-child(even) td {
+  background: #eef3fb;
+}
+
+tr:hover td {
+  background: #ffe9a8;
+}
+
+/* ===== Artículo ===== */
+article {
+  border-left: 4px solid var(--azul-claro);
+  padding-left: 1rem;
+}
+
+/* Selector hijo directo */
+article > p:first-of-type::first-letter {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--azul);
+}
+
+/* ===== Formulario ===== */
+input[type="text"],
+select {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--azul-claro);
+  box-shadow: 0 0 0 3px rgba(59, 125, 216, 0.25);
+}
+
+button {
+  background: var(--azul-claro);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--azul);
+}
+
+/* ===== Pie ===== */
+body > footer {
+  grid-area: pie;
+  background: var(--azul);
+  color: #dbe6f5;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cabecera"
+      "menu"
+      "contenido"
+      "pie";
+  }
+}

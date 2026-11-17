@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de práctica de HTML para Sistemas Web I">
+    <meta name="author" content="Jorge González Fernández">
+    <title>Ejercicio HTML &ndash; Sistemas Web I</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+
+    <!-- Cabecera principal -->
+    <header>
+      <h1>Mi primera página web</h1>
+      <p><em>Ejercicio de HTML - Sistemas Web I</em></p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#aficiones">Aficiones</a></li>
+        <li><a href="#tabla">Tabla de horarios</a></li>
+        <li><a href="#formulario">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+
+      <!-- Sección: Sobre mí -->
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>
+          Hola, soy <strong>Jorge</strong>, estudiante del Doble Grado en Ingeniería de
+          Sistemas de Información y ADE en la Universidad CEU San Pablo.
+          Esta página es mi primer ejercicio práctico de HTML.
+        </p>
+        <p>
+          Puedes escribirme a:
+          <a href="mailto:jorge.gonzalezfernandez@usp.ceu.es">jorge.gonzalezfernandez@usp.ceu.es</a>
+        </p>
+      </section>
+
+      <!-- Sección: Aficiones -->
+      <section id="aficiones">
+        <h2>Mis aficiones</h2>
+
+        <h3>Lista desordenada</h3>
+        <ul>
+          <li>Running</li>
+          <li>Fútbol</li>
+          <li>Tenis</li>
+          <li>Programación</li>
+        </ul>
+
+        <h3>Libros favoritos (lista ordenada)</h3>
+        <ol>
+          <li><em>El caso Alaska Sanders</em> &ndash; Joel Dicker</li>
+          <li><em>El libro de los Baltimore</em> &ndash; Joel Dicker</li>
+          <li><em>La verdad sobre el caso Harry Quebert</em> &ndash; Joel Dicker</li>
+        </ol>
+
+        <h3>Tecnologías que estoy aprendiendo</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>Lenguaje de marcado para estructurar páginas web.</dd>
+          <dt>CSS</dt>
+          <dd>Lenguaje de estilos para dar formato visual a las páginas.</dd>
+          <dt>JavaScript</dt>
+          <dd>Lenguaje de programación que añade interactividad.</dd>
+        </dl>
+      </section>
+
+      <!-- Sección: Tabla -->
+      <section id="tabla">
+        <h2>Tabla de horarios de clase</h2>
+        <table border="1">
+          <tr>
+            <th>Día</th>
+            <th>09:00 &ndash; 11:00</th>
+            <th>11:00 &ndash; 13:00</th>
+            <th>15:00 &ndash; 17:00</th>
+          </tr>
+          <tr>
+            <td>Lunes</td>
+            <td>Sistemas Web I</td>
+            <td>Matemáticas</td
+            <td>&mdash;</td>
+          </tr>
+          <tr>
+            <td>Martes</td>
+            <td>Programación</td>
+            <td>&mdash;</td>
+            <td>Física</td>
+          </tr>
+          <tr>
+            <td>Miércoles</td>
+            <td>&mdash;</td>
+            <td>Sistemas Web I</td>
+            <td>Programación</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Sección: Artículo -->
+      <section>
+        <h2>&iquest;Qué es HTML?</h2>
+        <article>
+          <h3>Breve historia</h3>
+          <p>
+            HTML (<strong>HyperText Markup Language</strong>) fue propuesto por
+            <em>Tim Berners-Lee</em> en 1990 y publicado en Internet en 1991.
+            Desde entonces ha evolucionado hasta convertirse en un
+            <u>Living Standard</u> mantenido por el WHATWG.
+          </p>
+          <p>
+            Hitos importantes:
+          </p>
+          <ul>
+            <li>1991 &ndash; HTML Tags (primera descripción pública)</li>
+            <li>1995 &ndash; HTML 3.0 aceptado por el W3C</li>
+            <li>1999 &ndash; HTML 4.0</li>
+            <li>2008 &ndash; Inicio de HTML5</li>
+            <li>Actualidad &ndash; Living Standard</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Sección: Formulario de contacto -->
+      <section id="formulario">
+        <h2>Formulario de contacto</h2>
+        <form action="#" method="post">
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br><br>
+
+          <label for="email">Correo electr&oacute;nico:</label><br>
+          <input type="text" id="email" name="email" placeholder="tu@email.com" required><br><br>
+
+          <label for="asunto">Asunto:</label><br>
+          <select id="asunto" name="asunto">
+            <option value="consulta">Consulta general</option>
+            <option value="practicas">Pr&aacute;cticas</option>
+            <option value="otro">Otro</option>
+          </select><br><br>
+
+          <label for="mensaje">Mensaje:</label><br>
+          <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aqu&iacute;" minlength="10" maxlength="300"><br><br>
+
+          <label>
+            <input type="checkbox" name="aviso"> Acepto el aviso legal
+          </label><br><br>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>
+        <small>
+          &copy; 2026 Jorge González Fernández &ndash;
+          Sistemas Web I &ndash; 
+        </small>
+      </p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('partials/cabecera') %>
+    <main>
+      <h1><%= title %></h1>
+      <p>Esta lista de elementos se carga desde el servidor:</p>
+      <ul class="lista">
+        <% elementos.forEach(function(elemento) { %>
+          <li>
+            <strong><%= elemento.nombre %></strong>
+            <span><%= elemento.descripcion %></span>
+          </li>
+        <% }); %>
+      </ul>
+      <% if (!usuario) { %>
+        <p><a class="boton" href="/login">Iniciar sesión</a></p>
+      <% } %>
+    </main>
+  </body>
+</html>

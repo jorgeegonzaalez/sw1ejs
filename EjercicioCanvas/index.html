@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ejercicio de Canvas para Sistemas Web I: juego Atrapa las estrellas">
+    <meta name="author" content="Jorge González Fernández">
+    <title>Ejercicio Canvas &ndash; Atrapa las estrellas</title>
+    <link rel="icon" type="image/svg+xml" href="../Ejercicio 1/favicon.svg">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Script en head con defer: se ejecuta cuando el HTML se ha procesado -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+    <header>
+      <h1>Atrapa las estrellas</h1>
+      <p>Mueve la cesta y recoge las estrellas antes de que lleguen al suelo.</p>
+    </header>
+
+    <main>
+
+      <!-- Zona de juego -->
+      <section id="juego">
+        <canvas id="myCanvas" width="500" height="500">
+          Tu navegador no soporta la etiqueta canvas.
+        </canvas>
+      </section>
+
+      <!-- Instrucciones -->
+      <section id="instrucciones">
+        <h2>Cómo se juega</h2>
+        <ul>
+          <li>Mueve la cesta con las flechas <strong>&larr;</strong> y <strong>&rarr;</strong> del teclado.</li>
+          <li>Cada estrella amarilla suma 1 punto; las rojas restan una vida.</li>
+          <li>Si una estrella amarilla llega al suelo, pierdes una vida.</li>
+          <li>Pulsa <strong>P</strong> para pausar y haz click en el canvas para empezar o volver a jugar.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><small>&copy; 2026 Jorge González Fernández &ndash; Sistemas Web I</small></p>
+    </footer>
+
+  </body>
+</html>

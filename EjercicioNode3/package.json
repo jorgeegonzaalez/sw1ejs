@@ -1,0 +1,12 @@
+{
+  "name": "ejercicio3-contrasena",
+  "version": "1.0.0",
+  "description": "Servidor Node.js que genera una contraseña a partir de X palabras aleatorias de un diccionario",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["contraseña", "diccionario", "node"],
+  "author": "Jorge González",
+  "license": "ISC"
+}

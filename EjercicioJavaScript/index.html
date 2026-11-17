@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ejercicio 1 de JavaScript para Sistemas Web I: generador de contraseñas">
+    <meta name="author" content="Jorge González Fernández">
+    <title>Ejercicio JavaScript &ndash; Generador de contraseñas</title>
+    <link rel="icon" type="image/svg+xml" href="../Ejercicio 1/favicon.svg">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Scripts en head con defer: se ejecutan cuando el HTML se ha procesado -->
+    <script src="diccionario.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+    <header>
+      <h1>Generador de contraseñas</h1>
+      <p>Genera una contraseña con varias palabras aleatorias de un diccionario.</p>
+    </header>
+
+    <main>
+
+      <!-- Opciones de configuración -->
+      <section id="opciones">
+        <h2>Opciones</h2>
+        <p>
+          <label for="numPalabras">Número de palabras (1-10):</label>
+          <input type="number" id="numPalabras" min="1" max="10" value="4">
+        </p>
+        <p>
+          <input type="checkbox" id="mayusculas" checked>
+          <label for="mayusculas">Comenzar cada palabra en mayúsculas</label>
+        </p>
+        <p>
+          <input type="checkbox" id="noRepetir" checked>
+          <label for="noRepetir">No repetir palabras</label>
+        </p>
+        <button id="boton">Generar Contraseña</button>
+      </section>
+
+      <!-- Resultado -->
+      <section id="resultado">
+        <p id="contrasena"></p>
+        <p id="info"></p>
+      </section>
+
+      <!-- Recomendaciones del NIST (diapositiva 97) -->
+      <section id="nist">
+        <h2>Recomendaciones del NIST</h2>
+        <ul>
+          <li>Mínimo 8 caracteres, recomendado mínimo 15.</li>
+          <li>Máximo permitido de al menos 64 caracteres.</li>
+          <li>No se debería imponer ninguna otra regla (caracteres especiales, números, mayúsculas...).</li>
+          <li>No se debería obligar a cambiarla periódicamente.</li>
+          <li>No debería tener asociadas preguntas si no te acuerdas de la contraseña.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><small>&copy; 2026 Jorge González Fernández &ndash; Sistemas Web I</small></p>
+    </footer>
+
+  </body>
+</html>

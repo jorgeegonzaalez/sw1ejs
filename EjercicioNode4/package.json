@@ -1,0 +1,22 @@
+{
+  "name": "ejercicio4-web-scraping",
+  "version": "1.0.0",
+  "description": "Servidor Node.js que descarga periódicamente la portada de Hacker News y extrae sus noticias con cheerio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "scraping",
+    "cheerio",
+    "node"
+  ],
+  "author": "Jorge González",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=20.18.1"
+  }
+}
